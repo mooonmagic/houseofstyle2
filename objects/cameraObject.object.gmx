@@ -57,8 +57,8 @@ display_w = global._WIDTH;
 display_h = global._HEIGHT;
 
 //calculate motion
-change_x = (display_mouse_get_x() - display_w/2) / 16;
-change_y = (display_mouse_get_y() - display_h/2) / 12;
+change_x = (display_mouse_get_x() - display_w/2) / 32;
+change_y = (display_mouse_get_y() - display_h/2) / 24;
 
 //move cam
 direction -= change_x

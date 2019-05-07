@@ -14,6 +14,7 @@
     <sprite>sprites\testSprite</sprite>
     <sprite>sprites\diamondSprite</sprite>
     <sprite>sprites\spritesSprites</sprite>
+    <sprite>sprites\otherTexture</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background1</background>
@@ -25,6 +26,7 @@
     <object>objects\worldObject</object>
     <object>objects\cameraObject</object>
     <object>objects\npcObject</object>
+    <object>objects\staticObject</object>
     <object>objects\exitObject</object>
     <object>objects\characterObject</object>
   </objects>

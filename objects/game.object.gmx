@@ -99,6 +99,10 @@ _to.scale = 8;
           <argument>
             <kind>1</kind>
             <string>global._steps += 1;
+if keyboard_check_pressed(ord('R')) {
+
+    game_restart();
+}
 </string>
           </argument>
         </arguments>
