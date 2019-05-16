@@ -61,32 +61,32 @@ friction=1; // I set the friction really high so we wouldn't slide around
 //walk
 if keyboard_check(ord('W')) {
 
-    motion_add(cameraObject.direction,8); // I've never used motion_add() before but I kept it because I don't know how to move in the mouselook direction without it
+    motion_add(cameraObject.direction,12); // I've never used motion_add() before but I kept it because I don't know how to move in the mouselook direction without it
                                            // Also, I made it instantly jump to the top speed because accelerating is dumb
     friction=0;
 }
 else if keyboard_check(ord('S')) {
 
-    motion_add(cameraObject.direction+180,8 );
+    motion_add(cameraObject.direction+180,12 );
     friction=0;
 }
 
 //strafe
 if keyboard_check(ord('A')) {
     
-    motion_add(cameraObject.direction+90,8);
+    motion_add(cameraObject.direction+90,12);
     friction=0;
 }
 else if keyboard_check(ord('D')) {
     
-    motion_add(cameraObject.direction-90,8);
+    motion_add(cameraObject.direction-90,12);
     friction=0;
 }
 
 //limit speed
-if abs(speed) &gt; 8 {
+if abs(speed) &gt; 12 {
     
-    speed = 8;
+    speed = 12;
 }
 
 //let's collide with the exit

@@ -51,13 +51,18 @@ global._HEIGHT = display_get_height();
 //global timer
 global._steps = 0;
 
+//load data
+global._wallsModel1 = d3d_model_create();
+d3d_model_load(global._wallsModel1,"walls.d3d");
+
 //create instances
-instance_create(0,0,cameraObject);
+instance_create(-3820,-90,cameraObject);
 instance_create(0,0,worldObject);
-instance_create(0,0,characterObject);
+instance_create(-3820,-90,characterObject);
+instance_create(0,0,wallsObject);
 
 //these are all npcs, i just changed the sprite and the scale to draw the sprite at
-_hey = instance_create(320,random_range(-160,0),npcObject);
+/*_hey = instance_create(320,random_range(-160,0),npcObject);
 _hey.z = 64;
 _hey.sprite_index = heyMaxSprite;
 _hey.scale = 2;
@@ -76,6 +81,8 @@ _to = instance_create(3840,random_range(800,960),npcObject);
 _to.z = 240;
 _to.sprite_index = spritesSprites;
 _to.scale = 8;
+
+
 </string>
           </argument>
         </arguments>

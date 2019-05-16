@@ -52,10 +52,7 @@
   </views>
   <instances>
     <instance objName="game" x="0" y="0" name="inst_104F2B21" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="exitObject" x="0" y="1120" name="inst_4024D347" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="staticObject" x="480" y="192" name="inst_63585685" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="staticObject" x="352" y="288" name="inst_C97AF17F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="staticObject" x="160" y="384" name="inst_40C6B038" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="npcObject" x="0" y="0" name="inst_C798450D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
