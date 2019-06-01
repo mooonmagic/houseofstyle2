@@ -3,11 +3,11 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="1" name="datafiles">
+  <datafiles number="20" name="datafiles">
     <datafile>
-      <name>walls.d3d</name>
+      <name>P3DC_v6.0.1.dll</name>
       <exists>-1</exists>
-      <size>25365</size>
+      <size>87040</size>
       <exportAction>2</exportAction>
       <exportDir></exportDir>
       <overwrite>0</overwrite>
@@ -19,11 +19,137 @@
           <CopyToMask>9223372036854775807</CopyToMask>
         </Config>
       </ConfigOptions>
-      <filename>walls.d3d</filename>
+      <filename>P3DC_v6.0.1.dll</filename>
+    </datafile>
+    <datafile>
+      <name>tunnel.d3d</name>
+      <exists>-1</exists>
+      <size>3271</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>tunnel.d3d</filename>
+    </datafile>
+    <datafile>
+      <name>side.room.2.d3d</name>
+      <exists>-1</exists>
+      <size>25399</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>side.room.2.d3d</filename>
+    </datafile>
+    <datafile>
+      <name>side.room.3.d3d</name>
+      <exists>-1</exists>
+      <size>25497</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>side.room.3.d3d</filename>
+    </datafile>
+    <datafile>
+      <name>side.room.4.d3d</name>
+      <exists>-1</exists>
+      <size>25337</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>side.room.4.d3d</filename>
+    </datafile>
+    <datafile>
+      <name>side.room.5.d3d</name>
+      <exists>-1</exists>
+      <size>25296</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>side.room.5.d3d</filename>
+    </datafile>
+    <datafile>
+      <name>side.room.1.d3d</name>
+      <exists>-1</exists>
+      <size>26203</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>side.room.1.d3d</filename>
+    </datafile>
+    <datafile>
+      <name>center.room.d3d</name>
+      <exists>-1</exists>
+      <size>31214</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>center.room.d3d</filename>
     </datafile>
   </datafiles>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\bass</sound>
+    <sound>sound\surf</sound>
+    <sound>sound\wail</sound>
+    <sound>sound\organ</sound>
+    <sound>sound\drums</sound>
+    <sound>sound\acoustic</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\skyTexture</sprite>
     <sprite>sprites\groundTexture</sprite>
@@ -34,30 +160,98 @@
     <sprite>sprites\testSprite</sprite>
     <sprite>sprites\diamondSprite</sprite>
     <sprite>sprites\spritesSprites</sprite>
+    <sprite>sprites\fork2</sprite>
+    <sprite>sprites\can3</sprite>
+    <sprite>sprites\can2</sprite>
+    <sprite>sprites\fork1</sprite>
+    <sprite>sprites\can1</sprite>
     <sprite>sprites\tile1</sprite>
     <sprite>sprites\tile2</sprite>
     <sprite>sprites\otherTexture</sprite>
     <sprite>sprites\obelisk1</sprite>
+    <sprite>sprites\templeSprite</sprite>
+    <sprite>sprites\wallTexture1</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background1</background>
     <background>background\background0</background>
   </backgrounds>
   <paths name="paths"/>
-  <shaders name="shaders">
-    <shader type="GLSLES">shaders\repeatShader.shader</shader>
-  </shaders>
+  <scripts name="scripts">
+    <scripts name="P3DC Scripts">
+      <script>scripts\p3dc_init.gml</script>
+      <script>scripts\p3dc_free.gml</script>
+      <script>scripts\p3dc_begin_model.gml</script>
+      <script>scripts\p3dc_end_model.gml</script>
+      <script>scripts\p3dc_add_model.gml</script>
+      <script>scripts\p3dc_set_trianglemask.gml</script>
+      <script>scripts\p3dc_begin_replace.gml</script>
+      <script>scripts\p3dc_end_replace.gml</script>
+      <script>scripts\p3dc_clear_model.gml</script>
+      <script>scripts\p3dc_begin_overwrite.gml</script>
+      <script>scripts\p3dc_end_overwrite.gml</script>
+      <script>scripts\p3dc_overwrite_triangle.gml</script>
+      <script>scripts\p3dc_overwrite_block.gml</script>
+      <script>scripts\p3dc_overwrite_floor.gml</script>
+      <script>scripts\p3dc_overwrite_wall.gml</script>
+      <script>scripts\p3dc_overwrite_cylinder.gml</script>
+      <script>scripts\p3dc_overwrite_cone.gml</script>
+      <script>scripts\p3dc_split_model.gml</script>
+      <script>scripts\p3dc_add_triangle.gml</script>
+      <script>scripts\p3dc_add_block.gml</script>
+      <script>scripts\p3dc_add_floor.gml</script>
+      <script>scripts\p3dc_add_wall.gml</script>
+      <script>scripts\p3dc_add_cylinder.gml</script>
+      <script>scripts\p3dc_add_cone.gml</script>
+      <script>scripts\p3dc_get_triangles.gml</script>
+      <script>scripts\p3dc_get_models.gml</script>
+      <script>scripts\p3dc_get_splitid.gml</script>
+      <script>scripts\p3dc_get_lastmask.gml</script>
+      <script>scripts\p3dc_triangle_data.gml</script>
+      <script>scripts\p3dc_check.gml</script>
+      <script>scripts\p3dc_check_still.gml</script>
+      <script>scripts\p3dc_check_rotation.gml</script>
+      <script>scripts\p3dc_check_split.gml</script>
+      <script>scripts\p3dc_ray.gml</script>
+      <script>scripts\p3dc_ray_still.gml</script>
+      <script>scripts\p3dc_ray_first.gml</script>
+      <script>scripts\p3dc_ray_split.gml</script>
+      <script>scripts\p3dc_ray_rotation.gml</script>
+      <script>scripts\p3dc_set_modrot.gml</script>
+    </scripts>
+    <scripts name="ExtendedFunctions">
+      <script>scripts\test_suite_end.gml</script>
+      <script>scripts\test_suite_init.gml</script>
+      <script>scripts\test_assert_same.gml</script>
+      <script>scripts\dectohex.gml</script>
+      <script>scripts\hextodec.gml</script>
+      <script>scripts\string_explode.gml</script>
+      <script>scripts\array_implode.gml</script>
+      <script>scripts\string_reverse.gml</script>
+      <script>scripts\string_mask.gml</script>
+      <script>scripts\url_encode.gml</script>
+      <script>scripts\url_decode.gml</script>
+      <script>scripts\string_ends_with.gml</script>
+      <script>scripts\string_starts_with.gml</script>
+    </scripts>
+  </scripts>
   <objects name="objects">
     <object>objects\game</object>
     <object>objects\worldObject</object>
     <object>objects\cameraObject</object>
-    <object>objects\npcObject</object>
+    <object>objects\obeliskObject</object>
+    <object>objects\objectObject</object>
+    <object>objects\object2Object</object>
+    <object>objects\object3Object</object>
     <object>objects\staticObject</object>
     <object>objects\exitObject</object>
     <object>objects\characterObject</object>
-    <object>objects\wallsObject</object>
+    <object>objects\centerRoomObject</object>
+    <object>objects\sideRoomObject</object>
+    <object>objects\screen</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\init</room>
     <room>rooms\gameRoom</room>
     <room>rooms\anotherRoom</room>
   </rooms>

@@ -44,22 +44,67 @@ d3d_set_shading(false)
 //switch interpolation off; GameMaker's interpolation is really bad and I like jaggies
 texture_set_interpolation(false)
 
-//get the screen width and height. I did this here because getting it every frame gives me the willies
-global._WIDTH = display_get_width();
-global._HEIGHT = display_get_height();
-
 //global timer
 global._steps = 0;
 
 //load data
-global._wallsModel1 = d3d_model_create();
-d3d_model_load(global._wallsModel1,"walls.d3d");
+global._centerRoomModel = d3d_model_create();
+d3d_model_load(global._centerRoomModel,"center.room.d3d");
+global._sideRoomModel1 = d3d_model_create();
+d3d_model_load(global._sideRoomModel1,"side.room.1.d3d");
+global._sideRoomModel2 = d3d_model_create();
+d3d_model_load(global._sideRoomModel2,"side.room.2.d3d");
+global._sideRoomModel3 = d3d_model_create();
+d3d_model_load(global._sideRoomModel3,"side.room.3.d3d");
+global._sideRoomModel4 = d3d_model_create();
+d3d_model_load(global._sideRoomModel4,"side.room.4.d3d");
+global._sideRoomModel5 = d3d_model_create();
+d3d_model_load(global._sideRoomModel5,"side.room.5.d3d");
+global._tunnelModel = d3d_model_create();
+d3d_model_load(global._tunnelModel,"tunnel.d3d");
 
 //create instances
-instance_create(-3820,-90,cameraObject);
-instance_create(0,0,worldObject);
-instance_create(-3820,-90,characterObject);
-instance_create(0,0,wallsObject);
+
+instance_create(150,178,characterObject);
+instance_create(80,80,cameraObject);
+instance_create(100,100,worldObject);
+_c = instance_create(100,100,centerRoomObject);
+_c._z = 3;
+instance_create(100,100,obeliskObject);
+for (a=0;a&lt;16;a+=1) {
+
+    instance_create(100+lengthdir_x(irandom_range(10,25),irandom(360)),100+lengthdir_y(irandom_range(10,25),irandom(360)),object3Object);
+}
+
+instance_create(100+lengthdir_x(40,45),100+lengthdir_y(40,45),objectObject);
+instance_create(100+lengthdir_x(40,135),100+lengthdir_y(40,135),objectObject);
+instance_create(100+lengthdir_x(40,225),100+lengthdir_y(40,225),object2Object);
+instance_create(100+lengthdir_x(40,315),100+lengthdir_y(40,315),object2Object);
+/*_s = instance_create(100 + lengthdir_x(100,72),100 + lengthdir_y(100,72),sideRoomObject);
+//_s._model = global._sideRoomModel2
+_s = instance_create(100 + lengthdir_x(100,144),100 + lengthdir_y(100,144),sideRoomObject);
+//_s._model = global._sideRoomModel2
+_s = instance_create(100 + lengthdir_x(100,216),100 + lengthdir_y(100,216),sideRoomObject);
+//_s._model = global._sideRoomModel2
+_s = instance_create(100 + lengthdir_x(100,252),100 + lengthdir_y(100,252),sideRoomObject);
+_s._model = global._sideRoomModel1
+_s = instance_create(100 + lengthdir_x(100,360),100 + lengthdir_y(100,360),sideRoomObject);
+//_s._model = global._sideRoomModel2
+//instance_create(100,100,npcObject);
+*/
+
+// collision detection
+p3dc_init();
+
+collision_player = p3dc_begin_model();
+p3dc_add_cylinder(-1,-1,0,1,1,1,false,24);
+p3dc_end_model();
+
+collision_map = p3dc_begin_model();
+p3dc_add_floor(0,0,0,200,200,0);
+//p3dc_add_block(400,400,400,-400,-400,-400);
+//p3dc_add_model("walls.d3d",100,100,0)
+p3dc_end_model();
 
 //these are all npcs, i just changed the sprite and the scale to draw the sprite at
 /*_hey = instance_create(320,random_range(-160,0),npcObject);
@@ -110,6 +155,32 @@ if keyboard_check_pressed(ord('R')) {
 
     game_restart();
 }
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="3">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>p3dc_free();
+
 </string>
           </argument>
         </arguments>

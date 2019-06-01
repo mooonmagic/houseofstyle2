@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scale = 20000;
+            <string>_z=0
+scale = 200;
 </string>
           </argument>
         </arguments>
@@ -49,10 +50,10 @@
           <argument>
             <kind>1</kind>
             <string>//draw ground
-d3d_draw_floor(-scale/2, -scale/2, 1, scale/2, scale/2, 1, sprite_get_texture(tile1,0), 16, 16);
+d3d_draw_floor(x+-scale/2,y+ -scale/2,_z+ 1,x+ scale/2,y+ scale/2,_z+ 1, sprite_get_texture(tile1,0), 16, 16);
 
 //draw skybox
-d3d_draw_block(-scale, -scale, -scale, scale, scale, scale, sprite_get_texture(tile2,0), 8, 8);
+d3d_draw_block(x+-scale,y+ -scale,_z+ -scale,x+ scale,y+ scale,_z+ scale, sprite_get_texture(tile2,0), 4, 4);
 </string>
           </argument>
         </arguments>

@@ -28,6 +28,10 @@
             <string>//INIT CHARACTER
 //set z value
 z=0;
+zspeed = 0;
+xspeed = 0;
+yspeed = 0;
+_speed = .1;
 </string>
           </argument>
         </arguments>
@@ -55,39 +59,64 @@ z=0;
 // I copied this first-person controller (and the camera that goes with it) from https://enigma-dev.org/docs/Wiki/3D_for_GML:_First_person_mouselook
 //
 
-//set friction
-friction=1; // I set the friction really high so we wouldn't slide around
+xspeed = 0;
+yspeed = 0;
 
 //walk
 if keyboard_check(ord('W')) {
 
-    motion_add(cameraObject.direction,12); // I've never used motion_add() before but I kept it because I don't know how to move in the mouselook direction without it
-                                           // Also, I made it instantly jump to the top speed because accelerating is dumb
-    friction=0;
+    
+    xspeed += lengthdir_x(_speed,cameraObject.direction)
+    yspeed += lengthdir_y(_speed,cameraObject.direction) 
 }
 else if keyboard_check(ord('S')) {
 
-    motion_add(cameraObject.direction+180,12 );
-    friction=0;
+    xspeed += lengthdir_x(_speed,cameraObject.direction - 180)
+    yspeed += lengthdir_y(_speed,cameraObject.direction - 180) 
 }
 
 //strafe
 if keyboard_check(ord('A')) {
     
-    motion_add(cameraObject.direction+90,12);
-    friction=0;
+    xspeed += lengthdir_x(_speed,cameraObject.direction + 90)
+    yspeed += lengthdir_y(_speed,cameraObject.direction + 90) 
 }
 else if keyboard_check(ord('D')) {
     
-    motion_add(cameraObject.direction-90,12);
-    friction=0;
+    xspeed += lengthdir_x(_speed,cameraObject.direction - 90)
+    yspeed += lengthdir_y(_speed,cameraObject.direction - 90) 
 }
 
-//limit speed
-if abs(speed) &gt; 12 {
-    
-    speed = 12;
+if zspeed &gt; -1 {
+
+    zspeed -= .01;
 }
+
+if !p3dc_check(game.collision_player,x+xspeed,y,z+1, game.collision_map,0,0,0) {
+
+    x += xspeed;
+}
+
+if !p3dc_check(game.collision_player,x,y+yspeed,z+1, game.collision_map,0,0,0) {
+
+    y += yspeed;
+}
+
+if (!p3dc_check(game.collision_player,x,y,z+zspeed, game.collision_map,0,0,0)) {
+
+    z += zspeed;
+}
+else {
+
+    z = 0;
+    zspeed = 0;
+}
+
+if z &lt; -400 {
+
+    game_end();
+}
+
 
 //let's collide with the exit
 if instance_exists(exitObject) {
